@@ -16,9 +16,11 @@ El PC de donde estoy haciendo estas configuraciones es un win10 con GPT por lo q
 En resumen, el GPT es el futuro.
 
 Se reinicia el pc como UEFI
+
 ```
 configuracion > restaurar > opciones avanzadas > iniciar UEFI framework
- 
+```
+
 ```
 sudo parted -l
 ```
