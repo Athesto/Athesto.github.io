@@ -6,7 +6,7 @@
 
 ## Drafts
  - [Grip](Drafts/grip)
- - [BundleLinux](Drafts/blundleLinux)
+ - [BundleLinux](Drafts/bundleLinux)
 
 
 
