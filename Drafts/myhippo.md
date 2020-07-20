@@ -7,11 +7,15 @@ Para la versión en inglés [en]
 Esta es mi experiencia y no me hago responsable de ningún mal funcionamiento en el pc
 
 # Prefacio
-Cuando me dijeron que había un software que me permitía trabajar creando 
+No hago esto como un tutorial donde escribo los pasos para instalar el hipposcraper. Eso ya está en el README del repositorio. En cambio sería mi bitácora donde quiero mostrar lo que he aprendido durante este proceso.
 
 # Introducción
-Hipposcrapper son dos scripts creados por @kai-dg y ubicados en este [repo][repo-hippo], voy a utilizar la versión `1.1.1`
-Este no es sólo un tutorial donde escribo los pasos para instalar el hipposcraper. En cambio, es mi bitácora. Eso significa que voy a explicar paso a paso lo que hice durante el proceso y dónde encontré errores en los archivos. Cómo hice para identificarlos. Estaré citando herramientas o foros donde explican algunos conceptos que me ayudaron para eso. Esta es mi forma de aprender y aquí de las comparto.
+Hipposcrapper son dos scripts creados por @kai-dg y ubicados en este [repo][repo-hippo]
+
+Voy a usar la última versión registrada que es la `1.1.1`
+
+Eso significa que voy a explicar paso a paso lo que hice durante el proceso y dónde encontré errores en los archivos. Cómo hice para identificarlos. Estaré citando herramientas o foros donde explican algunos conceptos que me ayudaron para eso. Esta es mi forma de aprender y aquí de las comparto.
+
 
 # Prerrequisitos
 Para normalizar la instalación lo haré en el box de `vagrant` `ubuntu/trusty64`
@@ -40,7 +44,7 @@ Ahora vagrant
 sudo apt-get install vagrant
 ```
 
-Cómo uso varios programas me gusta mantenerlo separado en una carpeta diferente cada instalación 
+Cómo manejo varias máquinas virtuales me gusta mantenerlas separado en carpetas diferentes
 ```bash
 mkdir -p vagrant/trusty64
 cd vagrant/trusty64
@@ -76,13 +80,13 @@ Ahora para rectificar si está instalado hago un listado de los modulos
 ```bash
 python -m pip list
 ```
-torios me gusta tenerlos dentro de una carpeta `github.com/[USUARIO]` donde`[USUARIO]` es su creador del
+me gusta tener los repositorios en la carpeta home y dentro de github.com y organizados por el creador. Así `~/github.com/[USUARIO]`. Esto es provechoso porque ya cada repositorio tiene su lugar y no están sueltos en la maquina
 
 Creamos la carpeta
 ```bash
 mkdir -p github.com/kai-dg
 cd github.com/kai-dg
-git clone https://
+git clone https://github.com/kai-dg/hipposcraper
 cd hipposcraper
 ```
 ## Instalación del hipposcraper
@@ -90,7 +94,7 @@ Ejecutamos el instalador
 ```bash
 ./setup
 ```
-Este nos pedirá usuario clave
+Este nos pedirá nombre, apellido, usuario de github, email y clave 
 
 Al crearlo todo salió perfecto
 Recomiendo copiar
@@ -129,7 +133,48 @@ Si encuentran otra solución me gustaría leerlo en los comentarios
 
 
 # Analizando el repositorio
+Ahora sí viene la parte más divertida
+Exactamente como trabaja hipposcraper?
 
+## El repositorio
+Para ver la distribución del repositorio uso el comando `tree`
+
+```bash
+$ tree hipposcraper/
+hipposcraper/
+├── README.md
+├── autover.sh
+├── hippoproject.py
+├── hipporead.py
+├── hipposcrape.sh
+├── requirements.txt
+├── scrapers
+│   ├── __init__.py
+│   ├── base_parse.py
+│   ├── high_scraper.py
+│   ├── low_scraper.py
+│   ├── read_scraper.py
+│   ├── sys_scraper.py
+│   └── test_file_scraper.py
+├── setup.sh
+└── tests    
+    └── test_base_parse.py
+
+2 directories, 16 files
+$
+```
+
+De este árbol me interesan estos archivos
+```bash
+...
+├── hippoproject.py
+├── hipporead.py
+├── hipposcrape.sh
+├── requirements.txt
+...
+├── setup.sh
+... 
+```
 # Notas
 Los gifs los cree con esta página
 Esta página graba el escritorio
@@ -137,6 +182,9 @@ Esta página graba el escritorio
 # Sobre el Mi
 
 # Agradecimiento
+A Gabriel por proponerme `python-pip`
+A Marianella por su apoyo
+A Carlos porque me propuso instalarlo juntos
 
 # Invitación
 Este es mi primer post personal y espero que no sea el único y
