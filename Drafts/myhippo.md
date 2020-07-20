@@ -1,5 +1,5 @@
 # My hipposcraper
-> Mi experiencia instalando hipposcrapper
+> Mi experiencia instalando hipposcrapper de @kai-dg
 
 Para la versión en inglés [en]
 
@@ -7,16 +7,17 @@ Para la versión en inglés [en]
 Esta es mi experiencia y no me hago responsable de ningún mal funcionamiento en el pc
 
 # Prefacio
-Hipposcrapper es un script son dos scripts creados por @kdg
+Cuando me dijeron que había un software que me permitía trabajar creando 
 
 # Introducción
+Hipposcrapper son dos scripts creados por @kai-dg y ubicados en este [repo][repo-hippo], voy a utilizar la versión `1.1.1`
 Este no es sólo un tutorial donde escribo los pasos para instalar el hipposcraper. En cambio, es mi bitácora. Eso significa que voy a explicar paso a paso lo que hice durante el proceso y dónde encontré errores en los archivos. Cómo hice para identificarlos. Estaré citando herramientas o foros donde explican algunos conceptos que me ayudaron para eso. Esta es mi forma de aprender y aquí de las comparto.
 
 # Prerrequisitos
 Para normalizar la instalación lo haré en el box de `vagrant` `ubuntu/trusty64`
 
 # El plan
- * [ ] instalar vagrant
+ * [ ] Instalar VirtualBox & vagrant
  * [ ] Dependencias
    * [ ] `pip`
    * [ ] `makenize`
@@ -27,7 +28,7 @@ Para normalizar la instalación lo haré en el box de `vagrant` `ubuntu/trusty64
 
 Comencemos
 
-## Instalar `vagrant`
+## Instalar `virtualbox` &`vagrant`
 En mi caso instalaré primero virtualbox
 Para Linux
 ```bash
@@ -41,13 +42,14 @@ sudo apt-get install vagrant
 
 Cómo uso varios programas me gusta mantenerlo separado en una carpeta diferente cada instalación 
 ```bash
-Tavo[~]$ mkdir -p vagrant/trusty64
-Tavo[~]$ cd vagrant/trusty64
-Tavo[trusty64]$ vagrant init ubuntu/trusty64
-Tavo[trusty64]$ vagrant up
-Tavo[trusty64]$ vagrant ssh
+mkdir -p vagrant/trusty64
+cd vagrant/trusty64
+vagrant init ubuntu/trusty64
+vagrant up
+vagrant ssh
+lsb_release -a
 ```
-Y con esto ya estamos ya estamos en una versión limpia y funcional de ubuntu. libre de todas nuestras instalaciones raras. Les recomiendo esta página donde estan los boxs para que jueguen
+Y con esto ya estamos en una versión limpia y funcional de ubuntu14. Libre de todas nuestras instalaciones raras. Les recomiendo esta página donde estan los boxs para que jueguen [box_vagrant]
 
 ## Dependencias
 Ya estamos en nuestro vagrant
@@ -59,8 +61,8 @@ sudo apt-get install pip
 ```
 Cómo no funciona, hay que instalar de otras formas
 ```bash
-curl 
-./get-
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 ```
 Cómo se instalo como un módulo de Python y no como binario. De ahora en adelante se tiene que usar `python -m pip` en vez de `pip`. Y por lo que citan en [What's the difference between "pip install" and "python -m pip install"?][sta-pip] no hay diferencia en su funcionamiento
 
@@ -146,3 +148,5 @@ Que les pueda servir
 [sta-pip]:https://stackoverflow.com/questions/25749621/whats-the-difference-between-pip-install-and-python-m-pip-install
 
 [bash-debug]:https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html
+
+[repo-hippo]:https://github.com/kai-dg/hipposcraper
