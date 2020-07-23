@@ -65,22 +65,21 @@ sudo apt-get install pip
 ```
 Cómo no funciona, hay que instalar de otras formas
 ```bash
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python get-pip.py
+sudo apt-get install python-pip
 ```
-Cómo se instalo como un módulo de Python y no como binario. De ahora en adelante se tiene que usar `python -m pip` en vez de `pip`. Y por lo que citan en [What's the difference between "pip install" and "python -m pip install"?][sta-pip] no hay diferencia en su funcionamiento
-
-En la instalaciones de los paquetes no encontré diferencias
+Ahora corresponde instalar las dependencias
 ```bash
 python -m pip install --user
 python -m pip install --user
 ```
-
 Ahora para rectificar si está instalado hago un listado de los modulos
 ```bash
-python -m pip list
+pip list | mecha
+pip list | beaut
 ```
-me gusta tener los repositorios en la carpeta home y dentro de github.com y organizados por el creador. Así `~/github.com/[USUARIO]`. Esto es provechoso porque ya cada repositorio tiene su lugar y no están sueltos en la maquina
+Se podría rellenar con `mechanize` y `beautifulsoup4` pero grep no necesita el string completo, sino que selecciona las lineas que contengan esos caracteres
+
+me gusta tener los repositorios en la carpeta home y dentro de github.com y organizados por el creador. Así `~/github.com/[USUARIO]`. Esto es provechoso ya cada repositorio tiene un orden dentro del pc
 
 Creamos la carpeta
 ```bash
@@ -92,17 +91,20 @@ cd hipposcraper
 ## Instalación del hipposcraper
 Ejecutamos el instalador
 ```bash
-./setup
+./setup.sh
 ```
 Este nos pedirá nombre, apellido, usuario de github, email y clave 
 
-Al crearlo todo salió perfecto
-Recomiendo copiar
+Al crearlo todo habrá salido perfecto. Recomiendo copiar
 Este comando crea un alias dentro del basrch
 
 Si usan zsh deberían copiar esos aliases en el archivo correspondiente
 
 Se edita el archivo de ejecución con el nombre del directorio donde estan los scripts
+```bash
+pwd
+nano hipposcraper.sh
+```
 
 Se reincia el bashrc
 
@@ -130,6 +132,13 @@ Hay que recordar que las observaciones se tienen que dar antes de mostrar la eje
 La clave la muestra como texto plano
 
 Si encuentran otra solución me gustaría leerlo en los comentarios
+
+# Salir Correctamente
+Ya hemos llegado a este paso, entonces podemos ir a la parte divertida que es a "Analizar el Repositorio" o dar por terminado el blog y sería cerrando el terminal y el vagrant
+```bash
+ctrl - d
+vagrant halt
+```
 
 
 # Analizando el repositorio
@@ -182,8 +191,8 @@ Esta página graba el escritorio
 # Sobre el Mi
 
 # Agradecimiento
-A Gabriel por proponerme `python-pip`
-A Marianella por su apoyo
+A Gabriel por proponerme `python-pip`  
+A Marianella por su apoyo  
 A Carlos porque me propuso instalarlo juntos
 
 # Invitación
