@@ -1,7 +1,8 @@
 # This is My Blog
 
 ## articles
- - [OS Portable](OS-portable.md)
+ - [OS Portable](Posts/OS-portable.md)
+ - [Tecnica vocal](Posts/tecnica-vocal.md)
  - [Java Course](JavaCourse)
 
 ## Drafts
