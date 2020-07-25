@@ -1,4 +1,4 @@
-<img src="https://cdn.pixabay.com/photo/2016/01/10/21/05/mic-1132528_960_720.jpg" width=600px height=300px>
+<img src="/assets/pics/mic-1132528_960_720.jpg" width=600px height=300px>
 
 # Resumen de ejercicios para técinica vocal
 
@@ -27,7 +27,7 @@ Los ejercicios de respiración se manejan por tres tiempos: Respirando-Sostenien
 Se se recomienda obstruir la boca con algun elemento. El ejemplo usado fue con el corcho de una botella de vino.
 
 
-<img src="https://cdn.pixabay.com/photo/2018/05/13/19/56/cork-3397658_960_720.jpg" width=50px></img>
+<img src="/assets/pics/cork-3397658_960_720.jpg" width=50px></img>
 
 
 ### Trabalenguas
