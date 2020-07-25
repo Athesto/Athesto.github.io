@@ -4,6 +4,7 @@
 
 ## Introducción
 Este es el resumen que hize del stream de Andrés Gonzales [@andresgfranco][twitter-andres] sobre el manejo de la voz
+[LINK AL VIDEO](https://www.instagram.com/tv/CDCuPkpFvSw/?igshid=6rizf7jntfuy)
 
 ## Ejercicios de respiración
 
