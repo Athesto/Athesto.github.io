@@ -27,7 +27,7 @@ Los ejercicios de respiración se manejan por tres tiempos: Respirando-Sostenien
 Se se recomienda obstruir la boca con algun elemento. El ejemplo usado fue con el corcho de una botella de vino.
 
 
-<img src="/assets/pics/cork-3397658_960_720.jpg" width=50px></img>
+<img src="assets/pics/cork-3397658_960_720.jpg" width=50px></img>
 
 
 ### Trabalenguas
