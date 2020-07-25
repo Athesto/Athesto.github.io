@@ -179,7 +179,7 @@ De este árbol me interesan estos archivos
 Los gifs los cree con esta página
 Esta página graba el escritorio
 
-# Sobre el Mi
+# Sobre el mi
 
 # Agradecimiento
 A Gabriel por proponerme `python-pip`
