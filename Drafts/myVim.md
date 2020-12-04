@@ -20,7 +20,7 @@ vimtutor es
 
 Holberton usa la versión de Ubuntu 14.04, y para esa época la última versión
 de vim es la 7.4. Esto lo podemos ver con el siguiente comando
-```bash
+```shell
 [~]$ vim --Version | head -1
 VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov 24 2016 16:43:18)
 ```
@@ -31,7 +31,7 @@ la lista de programas del gestor de paquetes de `APT`.
 
 Para actualizar los paquetes sería así
 
-```bash
+```console
 [~]$ sudo apt update
 ...
 All packages are up to date.
