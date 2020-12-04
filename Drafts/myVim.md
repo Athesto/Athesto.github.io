@@ -70,7 +70,7 @@ Donde:
 ### PPA:vim
 El siguiente paso sería importar un repositorio que tenga la última versión de
 vim y este sería el del usuario [Jonathonf][Jonathonf/vim]
-```bash
+```console
 [~]$ sudo apt list vim
 vim/trusty-updates,trusty-security,now 2:7.4.052-1ubuntu3.1 amd64 [installed]
 [~]$ sudo add-apt-repository ppa:jonathonf/vim
