@@ -1,9 +1,9 @@
 function getData(){
     openResumen()
     let output = []
-    let courseName = $x('//div[@class="CourseRow"]')[0].textContent
-    let questions = $x('//div[@class="Question"]')
-    questions.map((question)=>{
+    let courseName = document.querySelector('.CourseRow').textContent
+    let questions = document.querySelectorAll('.Question')
+    questions.forEach((question)=>{
         output.push({
             ...{courseName},
             number: parseInt(question.querySelector('.Question-count').textContent),
