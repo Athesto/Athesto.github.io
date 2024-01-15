@@ -29,6 +29,27 @@ function openResumen(){
     document.querySelector('.ResultsExam-btn-showMore')?.click()
 }
 
+function getInfoFromWindow(){
+    if (!window.initialProps){
+        console.log("missing window.initialProps. please check in the source page")
+        exit(1)
+    }
+    courseName = document.querySelector('.CourseRow').textContent
+
+    data = window.initialProps.questions.map(item=>{
+        item = {
+            courseName,
+            ...item,
+            ...item.materialInfo
+        }
+        item.answer = item.answer.replaceAll('\n', '')
+        item.question = item.question.replaceAll('\n', '')
+        delete item.materialInfo
+        return item
+    })
+    return data
+}
+
 output = {}
 output.data = getData()
 output.json = JSON.stringify(output.data, null, 2)
