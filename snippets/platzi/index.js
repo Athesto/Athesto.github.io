@@ -1,4 +1,5 @@
 function getData(){
+    openResumen()
     let output = []
     let courseName = $x('//div[@class="CourseRow"]')[0].textContent
     let questions = $x('//div[@class="Question"]')
@@ -23,6 +24,10 @@ function data2CSV(data){
     })
     return(output)
 };
+
+function openResumen(){
+    document.querySelector('.ResultsExam-btn-showMore')?.click()
+}
 
 output = {}
 output.data = getData()
