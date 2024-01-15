@@ -15,14 +15,14 @@ function getData(){
     return output
 };
 
-function data2CSV(data){
+function data2CSV(data,sepChar='+'){
     let output = []
     let keys = Object.keys(data[0])
-    output.push(keys.join(';'))
+    output.push(keys.join(sepChar))
     data.map((item)=>{
-        output.push(Object.values(item).join(';'))
+        output.push(Object.values(item).join(sepChar))
     })
-    return(output)
+    return(output.join('\n'))
 };
 
 function openResumen(){
@@ -32,7 +32,7 @@ function openResumen(){
 output = {}
 output.data = getData()
 output.json = JSON.stringify(output.data, null, 2)
-output.csv = data2CSV(output.data).join('\n')
+output.csv = data2CSV(output.data)
 output.isNotCorrect = output.data.filter(x=>!x.isCorrect)
 
 console.log(`
