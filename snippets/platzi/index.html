@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippet de platzi</title>
+</head>
+<body>
+    <h1>Resumen de respuestas en CSV</h1>
+    <h2>Disclaimer</h2>
+    <p>
+        Este código es de mi uso personal y no me hago responsable de cualquier mal uso de Este.
+    </p>
+    <h2>Descripción General</h2>
+    <p>
+        Este codigo convierte el resumen de las respuestas en un formato JSON,
+        CSV o objeto de javascript
+    </p>
+    <h2>Forma de uso</h2>
+    <p>
+        abre la consola con el click derecho en la pagina y seleccionas <strong>Inspeccionar</strong>
+        y colocas el siguiente código
+        <pre>
+            fetch('https://athesto.github.io/snippet/platzi/summary.js').then(x=>x.text()).then(eval)
+        </pre>
+    </p>
+    <h2>Descripción detallada</h2>
+    <p>
+        Este codigo viene con 2 funciones principales:
+        getData que toma la información del codigo y data2CSV que recibe un array de objetos
+        y los convierte en un string para csv.
+        <br>
+        Adicionalmente hay una variable preseteada llamada output que tiene las siguientes propiedades
+        <ul>
+            <li>output.json: resumen en formato JSON</li>
+            <li>output.data: resumen como objeto de JS</li>
+            <li>output.csv: string de csv que puedes copiar en un excel o google spreadsheet</li>
+        </ul>
+    </p>
+    <p>
+        Si tienes alguna duda o si quieres ver mas snippets puedes visitar
+        <a href="https://athesto.github.io"></a>
+        Be save
+    </p>
+</body>
+</html>

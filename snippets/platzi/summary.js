@@ -35,47 +35,12 @@ output.json = JSON.stringify(output.data, null, 2)
 output.csv = data2CSV(output.data).join('\n')
 
 console.log(`
-Welcome this Athesto's snippet.
-
-This snippet get the information of the summary and create an object ot it
-
-If you want to see the summary of the responses you can write
+Bienvenido a este snippet the Athesto
+Para ver el resumen de los objetos puedes usar los siguientes comandos
 console.log(output.data)
 console.log(output.json)
 console.log(output.csv)
 
+para más informacion visita https://athesto.github.io/sinippets/platzi
 
-
-this code has 2 main function and a preset Variable
-
-
-getData - returns an Array of objects with the next response
-- getData(): {
-        courseName: string
-        question: string
-        answer: string
-        isCorrect: boolean
-    }
-
-
-data2CSV - converts an Array of data into a string
-- data2CSV(data[]): string
-
-
-output - is the variable with the next props
-- output: 
-    {
-        data: Array of responses
-        json: Stringify version of Array
-        csv: CSV string version of Array
-    }
-
-
-
-
-If you have any doubt or any error please create a ticket in the url
-
-athesto.github.io/repo
-
-Be save
 `)
