@@ -33,6 +33,7 @@ output = {}
 output.data = getData()
 output.json = JSON.stringify(output.data, null, 2)
 output.csv = data2CSV(output.data).join('\n')
+output.isNotCorrect = output.data.filter(x=>!x.isCorrect)
 
 console.log(`
 Bienvenido a este snippet the Athesto
@@ -40,6 +41,7 @@ Para ver el resumen de los objetos puedes usar los siguientes comandos
 console.log(output.data)
 console.log(output.json)
 console.log(output.csv)
+console.log(output.isNotCorrect)
 
 para más informacion visita https://athesto.github.io/sinippets/platzi
 
