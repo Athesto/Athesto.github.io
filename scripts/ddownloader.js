@@ -1,7 +1,10 @@
 
-//Version: 1741487048
+//Version: 1741492905
 
 downloader = {
+  audios: [],
+  videos: [],
+
   stripURL: function(url) {
     const entries = ["range", "ump", "srfvp"];
     entries.forEach(entry => url.searchParams.delete(entry));
