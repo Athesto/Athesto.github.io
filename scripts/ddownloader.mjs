@@ -1,6 +1,7 @@
-//Version: 1741484623
 
-downloader = {
+//Version: 1741487048
+
+export const downloader = {
   stripURL: function(url) {
     const entries = ["range", "ump", "srfvp"];
     entries.forEach(entry => url.searchParams.delete(entry));
