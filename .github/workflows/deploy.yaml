@@ -12,23 +12,37 @@ jobs:
     name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+
+      - name: Move lockfile to root
+        run: cp webapp/pnpm-lock.yaml .
+
+      - name: Use pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 18
-          cache: yarn
+          version: 8.9.0
+          cache: pnpm
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
 
       - name: Install dependencies
+        working-directory: webapp
         run: pnpm install --frozen-lockfile
+
       - name: Build website
-        run: cd webapp && pnpm build
+        working-directory: webapp
+        run: pnpm build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: webapp/build
 
   deploy:
     name: Deploy to GitHub Pages
