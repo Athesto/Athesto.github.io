@@ -41,7 +41,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Athesto/Athesto.github.io/tree/main/content/docs',
+            'https://github.com/Athesto/Athesto.github.io/tree/main/docs',
         },
         blog: {
           showReadingTime: true,
@@ -53,7 +53,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Athesto/Athesto.github.io/tree/main/content/blog',
+            'https://github.com/Athesto/Athesto.github.io/tree/main/blog',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -69,6 +69,10 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+    },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: "Athesto Docs",

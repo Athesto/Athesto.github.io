@@ -17,3 +17,8 @@ psmodule:
   label: PSModules
   permalink: psmodule
   description: Post de modulos publicados
+
+docusaurus:
+  label: Docusaurus
+  permalink: docusaurus
+  description: post relacionados con Docusaurus
