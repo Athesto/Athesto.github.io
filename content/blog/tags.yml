@@ -1,0 +1,19 @@
+powershell:
+  label: Powershell
+  permalink: /powershell
+  description: Post relacionados con Powershell
+
+draft:
+  label: Drafts
+  permalink: /draft
+  description: Post que aun no los he terminado
+
+todo:
+  label: ToDo
+  permalink: /todo
+  description: Post que tienen listas de pendientes
+
+psmodule:
+  label: PSModules
+  permalink: psmodule
+  description: Post de modulos publicados
