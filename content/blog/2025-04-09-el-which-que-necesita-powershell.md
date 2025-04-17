@@ -7,16 +7,18 @@ tags: [powershell, psmodule, draft, todo]
 
 <!--
    -### TODO
-   -- [ ] Montar el modulo en la página de athesto.github.io/scripts
-   -- [ ] Montar el modulo en https://www.powershellgallery.com
+   -- [x] Montar su repositorio
+   -- [ ] Montar el módulo en https://www.powershellgallery.com
    -- [ ] Revisión de Chatgpt
-   -- [ ] Incluir imagenes
+   -- [x] Incluir imagenes
    -- [ ] Revisar ortografía
    -- [ ] Revisar la codificación. Parece que esta en uft-16
-   -- [ ] corregir sección de instalación
+   -- [x] corregir sección de instalación
  -->
 
-### El Problema
+![Banner-which](https://github.com/user-attachments/assets/f9642eeb-4adb-4502-bd5d-b0ac8722244c)
+
+### 🧩 El Problema
 Una de las cosas mas frustrantes cuando empecé a usar powershell es ¿Que
 comando estoy ejecutando aquí?  Yo vengo del terminal de linux y realmente me
 pareció increible que powershell tuviera los comandos como `ls` o `curl`, y
@@ -41,8 +43,8 @@ como admin y cada foro lo ejecutaba como quiziera.
 ```
 
 entonces ¿Que esta pasando aquí?. Ahí fue cuando descubrí que powershell es
-**CASE INSENSITIVE** ¿A quien se le ocurre usar con case insensitive palabras
-reservadas? Bueno, nada que hacer, eso es lo que hay.
+**CASE INSENSITIVE** ¿A quien se le ocurre usar palabras reservadas con case
+insensitive? Bueno, nada que hacer, eso es lo que hay.
 
 Omitiendo eso me pareció curioso que usen un estandar de `<verb>-<command>`
 esto me pareció una genialidad. Que puedas saber exactamente que comando estas
@@ -54,7 +56,7 @@ usar aliases
 Pero entonces quieres usar `curl`, pero descubriste que también existe el
 `wget`.  Y te preguntas ¿Que otro comando existe para `Invoke-WebRequest`?
 Tocará buscar un `which`. Aquí es donde entra el comando `get-command`. Puedes
-mandarle cualquier entrada una función, un comando, o un alias
+mandarle cualquier entrada: una función, un comando, o un alias
 
 ```
   Get-Command <your-command-alias-function>
@@ -65,7 +67,7 @@ este te retorna el nombre del comando al que apunta.
 
 Pero si lo que quieres es saber si existen más aliases asociados. Para eso
 existe el `get-aliases`. Aunque para este comando tienes que saber que le estas
-mandando. Si le mandas un comando debes usar
+mandando. Si le mandas un `comando` debes usar
 
 ```
   Get-Alias -Definition <your-command>
@@ -82,28 +84,25 @@ de otra forma arroja error
 Y pues quiero saber cuales son todos los alias asociados a un comando. ¿A caso es
 mucho pedir querer eso en un comando sencillo de which?
 
-### Solución (Get-CommandAliases)
+### 😎 Solución (Get-CommandAliases)
 
-Aquí es donde entra esta solución. El comando `Get-CommandAliases` te retorna la información
-de lo que necesites en un sencillo empaquetamiento.
+Aquí es donde entra esta solución. El comando `Get-CommandAliases` te retorna
+la información de lo que necesites en un sencillo empaquetamiento.
 
 ```shell
-┏C:\Users\Athesto>
-┗> get-commandAliases ls
+PS C:\> get-commandAliases ls
 
 CommandType Name          Aliases    Source
 ----------- ----          -------    ------
      Cmdlet Get-ChildItem dir,gci,ls Microsoft.PowerShell.Management
 
-┏C:\Users\Athesto
-┗> get-commandAliases get-childItem
+PS C:\> get-commandAliases get-childItem
 
 CommandType Name          Aliases    Source
 ----------- ----          -------    ------
      Cmdlet Get-ChildItem dir,gci,ls Microsoft.PowerShell.Management
 
-┏C:\Users\Athesto
-┗> which start
+PS C:\> which start
 
 CommandType Name          Aliases    Source
 ----------- ----          -------    ------
@@ -115,43 +114,23 @@ Es una combinación del `get-command` pero incluyendo la salida del
 `get-aliases -Definition`. De esa forma se puede averiguar cuales son los aliases
 asociados a un comando y puede recibir cualquier entrada
 
-### Como instalarlo
-```ps1
-# 1. Busca tu carpeta de modulos
-echo $env:PathModule  # C:\User\<tu-usuario>\Documents\Powershell\Modules;....
+### 📦 Como instalarlo
 
-# 2. crea la carpeta
-mkdir -p C:\User\<tu-usuario>\Documents\Powershell\Modules;
+Cambia al directorio de modulos y clona el repositorio
 
-# 3. Descarga el modulo
-Invoke-WebRequest athesto.github.io/scripts/powershell/Get-CommandAliases.psm1 |
-  -OutFile C:\User\<tu-usuario>\Documents\Powershell\Modules;
-
-# 4. Reincias el terminal
-exit
-
-# 5. Prueba el comando
+```powershell
+cd ($env:PSModulePath -split ';')[0]
+git clone 'https://github.com/athesto/Get-CommandAliases'
 help get-CommandAliases
-...
-
 which iwr
-...
-
-get-CommandAliases get-CommandAliases
 ```
 
-### Conclusión
-- Ya no tienes que pensar en si lo que estas ejecutando es un `Cmdlet` para
-  usar el
-  ```
-    Get-Alias -Definition <your-command>
-  ````
-  o un `Alias` para usar un
-  ```
-    Get-Alias -Definition (get-alias <your-alias>).Definition
-  ```
-- Todo se simplifica a un `which <your-command>`
-- Se puede pensar como añadir la columna de aliases al comando `Get-Command`.
+### 🏆 Conclusión
+- Ya no tienes que pensar si lo que estás ejecutando es un `Cmdlet` o un `Alias`.
+
+- Todo se simplifica a `which <nombre>`.
+
+- Piensa en esto como `Get-Command`, pero con columna de aliases incluida.
 
 <!-- truncate -->
 
