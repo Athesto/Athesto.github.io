@@ -10,8 +10,8 @@ tags: [powershell, psmodule, draft, todo]
    -- [x] Montar su repositorio
    -- [ ] Montar el módulo en https://www.powershellgallery.com
    -- [ ] Revisión de Chatgpt
-   -- [x] Incluir imagenes
-   -- [ ] Revisar ortografía
+   -- [x] Incluir imégenes
+   -- [x] Revisar ortografía
    -- [ ] Revisar la codificación. Parece que esta en uft-16
    -- [x] corregir sección de instalación
  -->
@@ -19,9 +19,9 @@ tags: [powershell, psmodule, draft, todo]
 ![Banner-which](https://github.com/user-attachments/assets/f9642eeb-4adb-4502-bd5d-b0ac8722244c)
 
 ### 🧩 El Problema
-Una de las cosas mas frustrantes cuando empecé a usar powershell es ¿Que
+Una de las cosas más frustrantes cuando empecé a usar powershell es ¿Qué
 comando estoy ejecutando aquí?  Yo vengo del terminal de linux y realmente me
-pareció increible que powershell tuviera los comandos como `ls` o `curl`, y
+pareció increíble que powershell tuviera los comandos como `ls` o `curl`, y
 pensé "ok, esto es como linux" y estaba feliz porque podía trabajar igual.  Y
 fue así hasta un día que necesitaba saber si existía una variable de entorno.
 Un sencillo `env` para saber si existía, Y de repente descubrí que el comando
@@ -29,10 +29,10 @@ que necesitaba es `ls env:`
 
 ...Espera un momento, ¿Por qué se necesita el comando `ls` para las variables
 de entorno? ¿Por qué tengo que colocar el `:`? ¿Las variables de entorno son
-una carpeta. Algo así como si estuvieramos hablando de un disco `C://`?.
+una carpeta. Algo así como si estuviéramos hablando de un disco `C://`?.
 
-Otro problema que encontre fue cuando estaba revisando como ejecutar powershell
-como admin y cada foro lo ejecutaba como quiziera.
+Otro problema que encontré fue cuando estaba revisando cómo ejecutar powershell
+como admin y cada foro lo ejecutaba como quisiera.
 ```powershell
   # Todos estos comandos hacen lo mismo
 
@@ -42,19 +42,19 @@ como admin y cada foro lo ejecutaba como quiziera.
   saps pwsh -verb runas
 ```
 
-entonces ¿Que esta pasando aquí?. Ahí fue cuando descubrí que powershell es
+entonces ¿Qué está pasando aquí?. Ahí fue cuando descubrí que powershell es
 **CASE INSENSITIVE** ¿A quien se le ocurre usar palabras reservadas con case
 insensitive? Bueno, nada que hacer, eso es lo que hay.
 
 Omitiendo eso me pareció curioso que usen un estandar de `<verb>-<command>`
-esto me pareció una genialidad. Que puedas saber exactamente que comando estas
+esto me pareció una genialidad. Que puedas saber exactamente qué comando estas
 usando, si leer/escribir/borrar/llamar etc. Pero bueno esto no es tan divertido
-cuando estas hablando de comandos del día a día, ¿Te imagias estar trabajando y
-te toca usar `get-content` todo el día?.  Eso explica por que la necesidad de
+cuando estas hablando de comandos del día a día, ¿Te imaginas estar trabajando y
+te toca usar `get-content` todo el día?.  Eso explica por qué la necesidad de
 usar aliases
 
 Pero entonces quieres usar `curl`, pero descubriste que también existe el
-`wget`.  Y te preguntas ¿Que otro comando existe para `Invoke-WebRequest`?
+`wget`.  Y te preguntas ¿Qué otro comando existe para `Invoke-WebRequest`?
 Tocará buscar un `which`. Aquí es donde entra el comando `get-command`. Puedes
 mandarle cualquier entrada: una función, un comando, o un alias
 
@@ -116,7 +116,7 @@ asociados a un comando y puede recibir cualquier entrada
 
 ### 📦 Como instalarlo
 
-Cambia al directorio de modulos y clona el repositorio
+Cambia al directorio de módulos y clona el repositorio
 
 ```powershell
 cd ($env:PSModulePath -split ';')[0]
