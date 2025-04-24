@@ -1,7 +1,7 @@
 ---
 slug: el-which-que-necesita-powershell
 authors: [gustavo]
-tags: [powershell, psmodule, draft, todo]
+tags: [powershell, psmodule, draft, todo, get-commandAliases, gca, scripts]
 image: https://github.com/user-attachments/assets/f9642eeb-4adb-4502-bd5d-b0ac8722244c
 ---
 # El `which` Que Necesita Powershell
