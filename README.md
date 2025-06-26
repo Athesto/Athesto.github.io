@@ -50,8 +50,8 @@ URL pública: https://athesto.github.io
 
 # Requiere Node.js (>= 16)
 cd webapp/
-npm install
-npm run start
+pnpm install
+pnpm run start
 
 
 
