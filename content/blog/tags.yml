@@ -18,6 +18,11 @@ psmodule:
   permalink: psmodule
   description: Post de modulos publicados
 
+scripts:
+  label: Scripts
+  permalink: scripts
+  description: Post relacionados con Scripts
+
 docusaurus:
   label: Docusaurus
   permalink: docusaurus
