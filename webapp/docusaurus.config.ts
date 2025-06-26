@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Athesto Docs',
-  tagline: 'my project documentation',
+  title: 'Athesto Labs',
+  tagline: 'Lo que pienso, lo que compilo',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -73,9 +73,9 @@ const config: Config = {
       defaultMode: 'dark',
       disableSwitch: false,
     },
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
     navbar: {
-      title: "Athesto Docs",
+      title: "Athesto Labs",
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
