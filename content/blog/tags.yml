@@ -23,6 +23,21 @@ scripts:
   permalink: scripts
   description: Post relacionados con Scripts
 
+comic:
+  label: Comics
+  permalink: comics
+  description: Post relacionados con Comics
+
+tutorial:
+  label: Tutorial
+  permalink: tutorial
+  description: Post relacionados con Tutorial
+
+lambda:
+  label: Lambda
+  permalink: lambda
+  description: Post relacionados con funciones serverlelss
+
 docusaurus:
   label: Docusaurus
   permalink: docusaurus

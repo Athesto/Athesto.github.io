@@ -28,21 +28,14 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en'],
+    locales: ['es'],
   },
 
   presets: [
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          path: '../content/docs',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Athesto/Athesto.github.io/tree/main/docs',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           path: '../content/blog',
@@ -65,7 +58,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  staticDirectories: ['../content/static', './static'],
+  staticDirectories: ['../content/static'],
 
   themeConfig: {
     // Replace with your project's social card
@@ -81,12 +74,6 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        //{
-        //  type: 'docSidebar',
-        //  sidebarId: 'projectSidebar',
-        //  position: 'left',
-        //  label: 'Tutorial',
-        //},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/Athesto/Athesto.github.io',

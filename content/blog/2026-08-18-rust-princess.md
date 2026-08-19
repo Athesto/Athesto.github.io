@@ -9,4 +9,6 @@ tags: [comic]
 Estaba viendo el comic de [Mart Vikus](https://toggl.com/blog/save-princess-8-programming-languages)
 Y pensé, por que no hacer una versión par rust.
 
-![rust-princess](/img/comics/rust-princess.png)
+![rust-princess](/comics/rust-princess.png)
+
+<!-- truncate -->
